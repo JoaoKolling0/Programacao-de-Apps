@@ -65,8 +65,23 @@ def ver_emprestimos_aluno(id_aluno):
     return
     
 def ver_emprestimos_atrasados():
-    pass
+    conexao = sqlite3.connect("biblioteca.db")
+    cursor = conexao.cursor()
+    
+    cursor.execute('''SELECT id_livro, id_aluno, data_devolucao
+                   FROM emprestimos WHERE status = "Emprestado" ''')
+    
+    conexao.commit()
+    emprestimos = cursor.fetchall()
+    
+    data_hoje = datetime.datetime.now()
+    for emprestimo in emprestimos:
+        data_devolucao = datetime.datetime.strptime(emprestimo[2], "%Y-%m-%d %H:%M:%S")
+        if(data_hoje > data_devolucao):
+            print(f"O usuário {emprestimo[1]} está com o livro {emprestimo[0]} atrasado. ")
+    
+    conexao.close()
 
 if __name__ == '__main__':
-    data_devolver = datetime.datetime(2025,5,25)
-    realizar_emprestimo(1, 1, data_devolver)
+    ver_emprestimos_atrasados()
+    
