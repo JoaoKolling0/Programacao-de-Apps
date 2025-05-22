@@ -49,8 +49,24 @@ def realizar_emprestimo(id_aluno, id_livro, data_devolucao):
     
     conexao.commit()
     conexao.close()
+    
+def ver_emprestimos_aluno(id_aluno):
+    conexao = sqlite3.connect("biblioteca.db")
+    cursor = conexao.cursor()
+    
+    cursor.execute('''SELECT livros.titulo, livros.autor, emprestimos.data_devolucao
+                   FROM emprestimos, livros
+                   WHERE emprestimos.id_aluno = ? AND livros.id = emprestimos.id_livro''', (id_aluno,))
+    
+    emprestimos = cursor.fetchall()
+    print(emprestimos)
+    conexao.commit()
+    conexao.close()
+    return
+    
+def ver_emprestimos_atrasados():
+    pass
 
 if __name__ == '__main__':
     data_devolver = datetime.datetime(2025,5,25)
     realizar_emprestimo(1, 1, data_devolver)
-    
