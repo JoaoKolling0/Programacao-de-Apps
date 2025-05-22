@@ -1,4 +1,5 @@
 import sqlite3
+import datetime
 
 def criar_tabelas():
     conexao = sqlite3.connect("biblioteca.db")
@@ -17,6 +18,39 @@ def criar_tabelas():
                    FOREIGN KEY(id_aluno) REFERENCES alunos(id))''')
     
     conexao.commit()
+     
+def criar_aluno(nome):
+    conexao = sqlite3.connect("biblioteca.db")
+    cursor = conexao.cursor()
     
+    cursor.execute('''INSERT INTO alunos (nome) VALUES (?)''', (nome,))
+    
+    conexao.commit()
+    conexao.close()
+    
+def criar_livro(titulo, autor, ano):
+        conexao = sqlite3.connect("biblioteca.db")
+        cursor = conexao.cursor()
+        
+        cursor.execute('''INSERT INTO livros (titulo, autor, ano) VALUES (?, ?, ?)''', (titulo, autor, ano))
+        
+        conexao.commit()
+        conexao.close()
+        
+def realizar_emprestimo(id_aluno, id_livro, data_devolucao):
+    
+    conexao = sqlite3.connect("biblioteca.db")
+    cursor = conexao.cursor()
+    
+    data_hoje = datetime.datetime.now()
+    
+    cursor.execute('''INSERT INTO emprestimos (id_aluno, id_livro, data_emprestimo, data_devolucao, status)
+                   VALUES (?, ?, ?, ?, ?)''', (id_aluno, id_livro, data_hoje, data_devolucao, "Emprestado"))
+    
+    conexao.commit()
+    conexao.close()
+
 if __name__ == '__main__':
-    criar_tabelas()
+    data_devolver = datetime.datetime(2025,5,25)
+    realizar_emprestimo(1, 1, data_devolver)
+    
