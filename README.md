@@ -1,5 +1,5 @@
 # Programa-o-de-Apps
-Matéria do 2° semestre
+Matéria do 2° semestre, Curso Técnico em Desenvolvimento de Sistemas;
 
 # Inicio 22/05/25
 
