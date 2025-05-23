@@ -10,7 +10,7 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
         self.trabalho = None
         # Os atributos são o que vem após o self (linha 4 a 10).
         
-    # Métodos (Ações) abaixo (linha 14)
+    # Métodos (Ações) abaixo (linha 14).
     def comer (self):
         if self.dinheiro < 10:
             return f"{self.nome} não tem dinheiro para comer"
@@ -21,11 +21,8 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
             return f"{self.nome} se almentou"
         
     def dormir (self):
-        if self.energia < 60:
-            return f"{self.nome} está começando a se sentir cansado"
-        else:
-            self.nome = min(100, self.energia + 40)
-            return f"{self.nome} dormiu um pouco"
+        self.energia = 100
+        self.fome -= 40
     
     def banho (self):
         pass
@@ -48,5 +45,3 @@ if __name__ == "__main__":
     print(obj2.nome)
     obj2.fome -= 10
     print(obj2.fome)
-    
-    
