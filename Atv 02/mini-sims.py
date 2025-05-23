@@ -12,3 +12,13 @@ if __name__ == "__main__":
     # Criar um objeto para o personagem
     obj1 = Personagem("Laura Caixão")
     
+    print(obj1.nome)
+    print(obj1.fome)
+    
+    obj2 = Personagem("GodFather")
+    
+    print(obj2.nome)
+    obj2.fome -= 10
+    print(obj2.fome)
+    
+    
