@@ -17,18 +17,35 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
             # para não ter que usar o "print" o professor disse para usar o comando acima (linha 17).
         else:
             self.nome = min(100, self.fome + 20)
-            self.dinheiro -= 8
+            self.dinheiro -= 10
             return f"{self.nome} se almentou"
         
     def dormir (self):
-        self.energia = 100
-        self.fome -= 40
-    
+        if (self.energia == 100):
+            return f"{self.nome} está como Coruja e não precisa dormir"
+        
+        else:
+            self.energia = 100
+            self.fome -= 40
+            return f"{self.nome} dormiu finalmente e está mais descansado"
+        
     def banho (self):
-        pass
+        if (self.higiene == 100):
+            return f"{self.nome} perde tudo mas não fica sujo(a), então não precisa de um banho"
+        
+        else:
+            self.higiene = 100
+            self.energia += 20
+            return f"{self.nome} o gambá finalmente tomou banho"
     
     def trabalhar (self):
-        pass
+        if (self.energia < 20):
+            return f"{self.nome} só falta enterrar de tão cansado(a), não pode trabalhar agora"
+        
+        self.energia -= 20
+        self.higiene -= 10
+        self.social += 10
+        return f"{self.nome} trabalhou como uma mula, mas pelo menos terminou o dia de trabalho"
     
     def socializar (self):
         pass
