@@ -13,14 +13,18 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem;
     # Métodos (Ações) abaixo
     def comer (self):
         if self.dinheiro < 10:
-            return f"{self.nome} não tem dinheiro para comer. "
+            return f"{self.nome} não tem dinheiro para comer"
         else:
             self.nome = min(100, self.fome + 20)
             self.dinheiro -= 8
             return f"{self.nome} se almentou"
         
     def dormir (self):
-        pass
+        if self.energia < 60:
+            return f"{self.nome} está começando a se sentir cansado"
+        else:
+            self.nome = min(100, self.energia + 40)
+            return f"{self.nome} dormiu um pouco"
     
     def banho (self):
         pass
