@@ -48,7 +48,11 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
         return f"{self.nome} trabalhou como uma mula, mas pelo menos terminou o dia de trabalho"
     
     def socializar (self):
-        pass
+        if (self.social == 100):
+            return f"{self.nome} é amigo(a) até do diabo de tão sociavel"
+        
+        else:
+            self.social == 100
         
 if __name__ == "__main__":
     # Criar um objeto para o personagem (linha 40).
