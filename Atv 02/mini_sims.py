@@ -1,22 +1,22 @@
 class Personagem: # Classe que vai fazer as coisas sobre o personagem.
     def __init__(self, nome):
-        #init é o construtor da classe (linha 2).
+        #init é o construtor da classe
         self.nome = nome
         self.energia = 100
-        self.fonme = 100
+        self.fome = 100
         self.higiene = 100
         self.social = 100
         self.dinheiro = 160
         self.trabalho = None
-        # Os atributos são o que vem após o self (linha 4 a 10).
+        # Os atributos são o que vem após o self
         
-    # Métodos (Ações) abaixo (linha 14).
+    # Métodos (Ações) abaixo
     def comer (self):
         if self.dinheiro < 10:
             return f"{self.nome} não tem dinheiro para comer"
-            # para não ter que usar o "print" o professor disse para usar o comando acima (linha 17).
+            # para não ter que usar o "print" o professor disse para usar o comando acima
         else:
-            self.nome = min(100, self.fome + 20)
+            self.fome = min(100, self.fome + 20)
             self.dinheiro -= 10
             return f"{self.nome} se almentou"
         
@@ -65,7 +65,7 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
     '''
         
 if __name__ == "__main__":
-    # Criar um objeto para o personagem (linha 40).
+    # Criar um objeto para o personagem
     obj1 = Personagem("Laura Caixão")
     
     print(obj1.nome)
