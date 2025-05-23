@@ -5,6 +5,7 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem;
         self.energia = 100
         self.fonme = 100
         self.higiene = 100
+        self.social = 100
         self.dinheiro = 160
         self.trabalho = None
         # Os atributos são o que vem após o self.
@@ -19,6 +20,15 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem;
             return f"{self.nome} se almentou"
         
     def dormir (self):
+        pass
+    
+    def banho (self):
+        pass
+    
+    def trabalhar (self):
+        pass
+    
+    def socializar (self):
         pass
         
 if __name__ == "__main__":
