@@ -18,6 +18,9 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem;
             self.dinheiro -= 8
             return f"{self.nome} se almentou"
         
+    def dormir (self):
+        pass
+        
 if __name__ == "__main__":
     # Criar um objeto para o personagem
     obj1 = Personagem("Laura Caixão")
