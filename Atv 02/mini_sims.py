@@ -53,6 +53,16 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
         
         else:
             self.social == 100
+            
+    def mostrar_status(self):
+        return f'''
+        👩 {self.nome}
+        😴 Energia: {self.energia}
+        🛀 Higiene: {self.higiene}
+        💬 Social: {self.social}
+        📋 Trabalho: {self.trabalho}
+        💰 Dinheiro: {self.dinheiro}
+    '''
         
 if __name__ == "__main__":
     # Criar um objeto para o personagem (linha 40).
