@@ -8,3 +8,6 @@ Criamos um banco de dados de uma "Biblioteca" junto ao professor, onde no dia an
 
 # Dia 23 - 
 apresentação de um slide onde nele há um tipo de explicação de: classe
+
+# Dia 26 - 
+já ta bem evoluida a atividade 02, já tem a interfaçe e o botão de comer...
