@@ -67,7 +67,7 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
     def ser_contratado(self, objeto_trabalho):
         self.trabalho = objeto_trabalho
         self.trabalho_nivel = 1
-        return f"{self.nome} foi contratado na carreira {self.trabalho}"
+        return f"{self.nome} foi contratado na carreira {self.trabalho.carreira}"
     
     def ser_demitido(self, objeto_trabalho):
         self.trabalho = None
@@ -78,27 +78,34 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
         pass
         
 class Trabalho:
-    def __init__(self, carreira, cargos, salarios, higiene, energia):
+    def __init__(self, carreira, cargos, salarios, higiene, energia, social):
         # Atributos
         self.carreira = carreira
         self.cargos = cargos # Lista de cargos possíveis
         self.salarios = salarios # Lista de salarios
         self.higiene_utilizada = higiene
         self.energia_gasta = energia
+        self.social_ganho = social
         
     # Métodos
     
         
         
 if __name__ == "__main__":
-    # Criar um objeto para o personagem
-    obj1 = Personagem("Laura Caixão")
+    # Criar um objeto para o trabalho
+    carreira = "Artista Pop"
+    cargos = ["Cantor de Rua", "Artista idependente", "Pop star"]
+    salarios = [100, 1000, 20000]
+    higiene = 30
+    energia = 50
+    social = 20
+
+    objeto_trabalho = Trabalho(carreira, cargos, salarios, higiene, energia, social)
+
     
-    print(obj1.nome)
-    print(obj1.fome)
+    # Criar personagem
+    nome = "Laura Caixão"
+    objeto_personagem = Personagem(nome)
+    mensagem = objeto_personagem.ser_contratado(objeto_trabalho)
+    print(mensagem)
     
-    obj2 = Personagem("Buddy")
-    
-    print(obj2.nome)
-    obj2.fome -= 10
-    print(obj2.fome)
