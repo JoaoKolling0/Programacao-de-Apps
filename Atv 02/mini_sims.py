@@ -64,6 +64,19 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
         💰 Dinheiro: {self.dinheiro}
     '''
     
+    def ser_contratado(self, objeto_trabalho):
+        self.trabalho = objeto_trabalho
+        self.trabalho_nivel = 1
+        return f"{self.nome} foi contratado na carreira {self.trabalho}"
+    
+    def ser_demitido(self, objeto_trabalho):
+        self.trabalho = None
+        self.trabalho_nivel = 0
+        return f"{self.nome} foi demitido da carreira {self.trabalho}"
+    
+    def pedir_demissao(self, objeto_trabalho):
+        pass
+        
 class Trabalho:
     def __init__(self, carreira, cargos, salarios, higiene, energia):
         # Atributos
@@ -74,6 +87,8 @@ class Trabalho:
         self.energia_gasta = energia
         
     # Métodos
+    
+        
         
 if __name__ == "__main__":
     # Criar um objeto para o personagem
