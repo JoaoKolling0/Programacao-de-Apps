@@ -65,12 +65,15 @@ class Personagem: # Classe que vai fazer as coisas sobre o personagem.
     '''
     
 class Trabalho:
-    def __init__(self, carreira, cargos, salarios):
+    def __init__(self, carreira, cargos, salarios, higiene, energia):
         # Atributos
         self.carreira = carreira
         self.cargos = cargos # Lista de cargos possíveis
         self.salarios = salarios # Lista de salarios
+        self.higiene_utilizada = higiene
+        self.energia_gasta = energia
         
+    # Métodos
         
 if __name__ == "__main__":
     # Criar um objeto para o personagem
