@@ -39,7 +39,7 @@ class SimsApp:
     def acao_botao_procurar_emprego(self):
         self.trabalhos = self.criar_trabalhos()
         for trabalho in self.trabalhos:
-            mensagem = trabalho.informacoes
+            mensagem = trabalho.informacoes()
             resposta = messagebox.askquestion("Oferta de emprego", message=mensagem)
             if resposta == "yes":
                 mensagem_sucesso = f"Parabéns, você foi contratado na carreira de {trabalho.carreira}."
