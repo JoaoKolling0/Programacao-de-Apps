@@ -89,6 +89,12 @@ class Trabalho:
         
     # Métodos
     
+    def informacoes(self):
+        return f'''
+        Carreira: {self.carreira}
+        Cargos: {self.cargos}
+        Salarios: {self.salarios}
+    '''
         
         
 if __name__ == "__main__":
