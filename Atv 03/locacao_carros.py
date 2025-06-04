@@ -41,4 +41,9 @@ if __name__ == "__main__":
 
     objeto_cliente2 = Cliente(nome = "Senku -", cpf = "Cpf: 669.355.666-64 -", endereco = "Arkhan -", telefone = "+99 (666) 900000000")
     print(objeto_cliente2.nome, objeto_cliente2.cpf, objeto_cliente2.endereco, objeto_cliente2.telefone)
+
+    print("")
+
+    objeto_locacao = Locacao(cliente = objeto_cliente, carro = objeto_veiculo3, valor = "800 Por Dia", forma_pagamento = "Cartão", data = "04/06/2025", quantidade_de_dias = "8 dias")
+    print(objeto_locacao.cliente.nome, objeto_locacao.carro.modelo, objeto_locacao.valor, objeto_locacao.data, objeto_locacao.forma_pagamento, objeto_locacao.quantidade_de_dias)
     
