@@ -19,4 +19,12 @@ if __name__ == "__main__":
 
     objeto_veiculo4 = Veiculo(modelo = "Uno -", preco = "200 Reais por dia -", ano = 1990, quilometragem = "- 3200 Km Rodados")
     print(objeto_veiculo4.modelo, objeto_veiculo4.preco, objeto_veiculo4.ano, objeto_veiculo4.quilometragem)
-    
+
+class Cliente:
+    def __init__(self, nome, cpf, endereco, telefone):
+        self.nome = nome
+        self.cpf = cpf
+        self.endereco = endereco
+        self.telefone = telefone
+
+        
