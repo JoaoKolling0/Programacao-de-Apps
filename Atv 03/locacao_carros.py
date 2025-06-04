@@ -27,4 +27,12 @@ class Cliente:
         self.endereco = endereco
         self.telefone = telefone
 
+class Locacao:
+    def __init__(self, cliente, carro, valor, forma_pagamento, data, quantidade_de_dias):
+        self.cliente = cliente
+        self.carro = carro
+        self.valor = valor
+        self.forma_pagamento = forma_pagamento
+        self.data = data
+        self.quantidade_de_dias = quantidade_de_dias
         
