@@ -34,4 +34,11 @@ if __name__ == "__main__":
     objeto_veiculo4 = Veiculo(modelo = "Uno -", preco = "200 Reais por dia -", ano = 1990, quilometragem = "- 3200 Km Rodados")
     print(objeto_veiculo4.modelo, objeto_veiculo4.preco, objeto_veiculo4.ano, objeto_veiculo4.quilometragem)
 
+    print("")
 
+    objeto_cliente = Cliente(nome = "Ednaldo Pereira -", cpf = "Cpf: 669.355.740-64 -", endereco = "Amegakure -", telefone = "+99 (666) 40028922")
+    print(objeto_cliente.nome, objeto_cliente.cpf, objeto_cliente.endereco, objeto_cliente.telefone)
+
+    objeto_cliente2 = Cliente(nome = "Senku -", cpf = "Cpf: 669.355.666-64 -", endereco = "Arkhan -", telefone = "+99 (666) 900000000")
+    print(objeto_cliente2.nome, objeto_cliente2.cpf, objeto_cliente2.endereco, objeto_cliente2.telefone)
+    
