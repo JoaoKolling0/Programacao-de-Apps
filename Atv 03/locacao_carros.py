@@ -5,7 +5,8 @@ class Veiculo: #Classe que vai englobar as coisas sobre os Veiculos.
         self.data
         self.quilometragem
 
-
+    def modelos(self):
+        pass
 
 if __name__ == "__main__":
     pass
