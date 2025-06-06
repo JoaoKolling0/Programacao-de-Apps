@@ -15,4 +15,7 @@ class Diretorio:
         self.lista_pasta = lista_pasta
         
 if __name__ == "__main__":
-    pass
+    
+    objeto_arquivo01 = Arquivo(nome = "- ACDC Back in Black -", tipo = "mp3 -", data = "06/062/025 -", tamanho = "6mb -")
+    print(objeto_arquivo01.nome, objeto_arquivo01.tipo, objeto_arquivo01.data, objeto_arquivo01.tamanho)
+    
