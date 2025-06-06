@@ -8,3 +8,6 @@ Foi um tipo de "Introdução/atividade de introdução" feita pelo professor usa
 
 # Atv 02
 Um tipo de "Mini the sims" está sendo criado nessa atividade (junto ao professor);
+
+# Atv 03
+Um codigo feito com o objetivo de criar uma locadora de carros (feito tudo por mim);
