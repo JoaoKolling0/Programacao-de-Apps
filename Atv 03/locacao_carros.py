@@ -1,18 +1,18 @@
-class Veiculo: #Classe que vai englobar as coisas sobre os Veiculos.
+class Veiculo: #Classe que vai englobar as coisas sobre os Veiculo.
     def __init__(self, modelo, preco, ano, quilometragem):
         self.modelo = modelo
         self.preco = preco
         self.ano = ano
         self.quilometragem = quilometragem
     
-class Cliente:
+class Cliente: #Classe que vai englobar as coisas sobre o Cliente.
     def __init__(self, nome, cpf, endereco, telefone):
         self.nome = nome
         self.cpf = cpf
         self.endereco = endereco
         self.telefone = telefone
 
-class Locacao:
+class Locacao: #Classe que vai englobar as coisas sobre a Locação.
     def __init__(self, cliente, carro, valor, forma_pagamento, data, quantidade_de_dias):
         self.cliente = cliente
         self.carro = carro
