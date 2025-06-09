@@ -11,3 +11,6 @@ Um tipo de "Mini the sims" está sendo criado nessa atividade (junto ao professo
 
 # Atv 03
 Um codigo feito com o objetivo de criar uma locadora de carros (feito tudo por mim);
+
+# Atv 04
+um codigo que simula diretórios (feito por mim);
