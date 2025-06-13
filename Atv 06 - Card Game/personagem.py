@@ -67,6 +67,6 @@ class CartaAumento(Carta):
         
     def usar(self, personagem: Personagem):
         personagem.pontos_ataque += self.pts_aumentado
-        return f"{personagem.nome} aumentou {self.pts_aumentado} de ataque"
+        return f"{personagem.nome} aumentou {self.pts_aumentado} de {self.tipo}"
     
         
