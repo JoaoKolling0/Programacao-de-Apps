@@ -39,3 +39,4 @@ class CartaCura(Carta):
         personagem.vida += self.ponto_de_vida_curada
         return f"{personagem.nome} teve {self.ponto_de_vida_curada} de vida restaurada"
     
+    
