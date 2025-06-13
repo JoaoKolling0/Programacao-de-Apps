@@ -1,4 +1,4 @@
-from personagem import Personagem, Carta, CartaDano
+from personagem import Personagem, Carta, CartaDano, CartaCura
 
 objeto_personagem1 = Personagem("Kolling")
 mensagem = objeto_personagem1.falar_nome()
@@ -12,3 +12,11 @@ print("")
 objeto_cartadano1 = CartaDano(nome = "Air Slash", descricao = "Lança um corte feito de vento na direção do oponente", energia_gasta = 2, ponto_dano = 8)
 mensagem = objeto_cartadano1.usar(objeto_personagem2)
 print(mensagem)
+
+print("")
+
+objeto_cartacura1 = CartaCura(nome = "Poção de Cura pequena", descricao = "Poção de cura que restaura uma pequena porção de vida", energia_gasta = 2, ponto_vida_curada = 8)
+mensagem = objeto_cartacura1.usar(objeto_personagem1)
+print(mensagem)
+
+print("")

@@ -30,5 +30,12 @@ class CartaDano(Carta):
         oponente.vida -= self.pontos_de_dano
         return f"O(a) oponente {oponente.nome} recebeu {self.pontos_de_dano} de dano"
     
+class CartaCura(Carta):
+    def __init__(self, nome, descricao, energia_gasta, ponto_vida_curada):
+        super().__init__(nome, descricao, energia_gasta)
+        self.ponto_de_vida_curada = ponto_vida_curada
         
-        
+    def usar(self, personagem: Personagem):
+        personagem.vida += self.ponto_de_vida_curada
+        return f"{personagem.nome} teve {self.ponto_de_vida_curada} de vida restaurada"
+    
