@@ -13,5 +13,6 @@ class Personagem:
         return f"Olá, meu nome é {self.nome}"
     
 class Cartas:
-    def __init__(self, ver_lista_cartas):
+    def __init__(self, ver_lista_cartas, comprar_carta):
         self.ver_lista_cartas = ver_lista_cartas
+        self.comprar_carta = comprar_carta
