@@ -39,4 +39,13 @@ class CartaCura(Carta):
         personagem.vida += self.ponto_de_vida_curada
         return f"{personagem.nome} teve {self.ponto_de_vida_curada} de vida restaurada"
     
+class CartaRoubo(Carta):
+    def __init__(self, nome, descricao, energia_gasta, roubar_carta):
+        super().__init__(nome, descricao, energia_gasta)
+        self.roubar_carta = roubar_carta
+    
+    
+    def usar(self, oponente: Personagem):
+        oponente.mao_de_cartas = self.roubar_carta
+        return f"{oponente.nome} teve {self.roubar_carta} cartas roubadas"
     
