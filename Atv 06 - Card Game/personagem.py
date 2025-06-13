@@ -59,3 +59,14 @@ class CartaStun(Carta):
         oponente.status = self.carta_de_stun
         return f"{oponente.nome} está {self.carta_de_stun}"
     
+class CartaAumento(Carta):
+    def __init__(self, nome, descricao, energia_gasta, tipo: Personagem, pts_aumentado):
+        super().__init__(nome, descricao, energia_gasta)
+        self.tipo = tipo
+        self.pts_aumentado = pts_aumentado
+        
+    def usar(self, personagem: Personagem):
+        personagem.pontos_ataque += self.pts_aumentado
+        return f"{personagem.nome} aumentou {self.pts_aumentado} de ataque"
+    
+        
