@@ -12,8 +12,23 @@ class Personagem:
     def falar_nome(self):
         return f"Olá, meu nome é {self.nome}"
     
-class Cartas:
-    def __init__(self, cartas,ver_lista_cartas, comprar_carta):
-        self.cartas = cartas 
-        self.ver_lista_cartas = ver_lista_cartas
-        self.comprar_carta = comprar_carta
+class Carta:
+    def __init__(self, nome, descricao, energia_gasta):
+        self.nome = nome
+        self.descricao = descricao
+        self.energia_gasta = energia_gasta
+        
+    def usar(self):
+        pass
+    
+class CartaDano(Carta):
+    def __init__(self, nome, descricao, energia_gasta, ponto_dano):
+        super().__init__(nome, descricao, energia_gasta)
+        self.pontos_de_dano = ponto_dano
+        
+    def usar(self, oponente: Personagem):
+        oponente.vida -= self.pontos_de_dano
+        return f"O(a) oponente {oponente.nome} recebeu {self.pontos_de_dano} de dano"
+    
+        
+        
