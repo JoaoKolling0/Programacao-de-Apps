@@ -1,10 +1,10 @@
-from personagem import Personagem, Carta, CartaDano, CartaCura, CartaRoubo
+from personagem import Personagem, Carta, CartaDano, CartaCura, CartaRoubo, CartaStun
 
-objeto_personagem1 = Personagem("Kolling")
+objeto_personagem1 = Personagem(nome = "Kolling", status = "bem")
 mensagem = objeto_personagem1.falar_nome()
 print(mensagem)
 
-objeto_personagem2 = Personagem("Misty")
+objeto_personagem2 = Personagem(nome = "Misty", status = "bem")
 mensagem = objeto_personagem2.falar_nome()
 
 print("")
@@ -23,6 +23,12 @@ print("")
 
 objeto_cartarouba1 = CartaRoubo(nome = "Roubar 01 carta", descricao = "rouba 1 carta do(a) oponente", energia_gasta = 4, roubar_carta = 1)
 mensagem = objeto_cartarouba1.usar(objeto_personagem1)
+print(mensagem)
+
+print("")
+
+objeto_cartastun1 = CartaStun(nome = "Carta de Atordoamento", descricao = "Deixa o oponente atordoado", energia_gasta = 4, carta_de_stun = "Atordoado(a)")
+mensagem = objeto_cartastun1.usar(objeto_personagem2)
 print(mensagem)
 
 print("")

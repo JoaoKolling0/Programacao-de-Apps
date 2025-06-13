@@ -1,6 +1,7 @@
 class Personagem:
-    def __init__(self, nome):
+    def __init__(self, nome, status):
         self.nome = nome
+        self.status = status
         self.vida_max = 100
         self.vida = 100
         self.pontos_ataque = 8
@@ -48,4 +49,13 @@ class CartaRoubo(Carta):
     def usar(self, oponente: Personagem):
         oponente.mao_de_cartas = self.roubar_carta
         return f"{oponente.nome} teve {self.roubar_carta} cartas roubadas"
+    
+class CartaStun(Carta):
+    def __init__(self, nome, descricao, energia_gasta, carta_de_stun):
+        super().__init__(nome, descricao, energia_gasta)
+        self.carta_de_stun = carta_de_stun
+        
+    def usar(self, oponente: Personagem):
+        oponente.status = self.carta_de_stun
+        return f"{oponente.nome} está {self.carta_de_stun}"
     
