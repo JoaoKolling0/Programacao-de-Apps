@@ -70,5 +70,23 @@ class CartaAumento(Carta):
         return f"{personagem.nome} aumentou {self.pts_aumentado} de {self.tipo}"
     
 class Partida:
-    def __init__(self):
+    def __init__(self, turno, jogador1, jogador2, jogador_atual):
+        
+        self.turno = turno
+        self.jogador1 = jogador1
+        self.jogador2 = jogador2
+        self.jogador_atual = jogador_atual
+        
+    def iniciar(self):
         pass
+    
+    def trocar_turno(self):
+        pass
+    
+    def trocar_jogador(self):
+        pass
+    
+    def acabar(self):
+        pass
+    
+    
