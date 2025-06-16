@@ -80,8 +80,8 @@ class Partida:
     def iniciar(self):
         pass
     
-    def trocar_turno(self):
-        pass
+    def trocar_turno(self, verificar_jogador):
+        self.verificar_jogador = verificar_jogador
     
     def trocar_jogador(self):
         pass
