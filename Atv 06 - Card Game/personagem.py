@@ -69,4 +69,6 @@ class CartaAumento(Carta):
         personagem.pontos_ataque += self.pts_aumentado
         return f"{personagem.nome} aumentou {self.pts_aumentado} de {self.tipo}"
     
-        
+class Partida:
+    def __init__(self):
+        pass
