@@ -35,6 +35,13 @@ print(mensagem)
 
 print("")
 
+objeto_cartacura2 = CartaCura(nome = "Poção de Cura Média", descricao = "Poção de cura que restaura uma média porção de vida", energia_gasta = 4, ponto_vida_curada = 16)
+mensagem = objeto_cartacura2.usar(objeto_personagem2)
+print(f"{objeto_personagem2.nome} usou {objeto_cartacura2.nome}")
+print(mensagem)
+
+print("")
+
 objeto_cartarouba1 = CartaRoubo(nome = "Roubar uma carta", descricao = "rouba 1 carta do(a) oponente", energia_gasta = 4, roubar_carta = 1)
 mensagem = objeto_cartarouba1.usar(objeto_personagem1)
 print(f"{objeto_personagem2.nome} usou {objeto_cartarouba1.nome} em {objeto_personagem1.nome}")
