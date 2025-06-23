@@ -1,5 +1,5 @@
 from personagem import Personagem, Carta, CartaDano, CartaCura, CartaRoubo, CartaStun, CartaAumento
-
+# Esse Main não será usado para o Jogo (o Jogo.py é onde está o jogo agora);
 print("")
 # O "objeto_personagem" é o jeito que usei para printar na main o personagem "principal", eu ainda tenho que fazer uma interfaçe;
 objeto_personagem1 = Personagem(nome = "Kolling", status = "bem")
@@ -35,7 +35,7 @@ print(mensagem)
 
 print("")
 
-objeto_cartacura2 = CartaCura(nome = "Poção de Cura Média", descricao = "Poção de cura que restaura uma média porção de vida", energia_gasta = 4, ponto_vida_curada = 16)
+objeto_cartacura2 = CartaCura(nome = "Poção de Cura Grande", descricao = "Poção de cura que restaura uma grande porção de vida", energia_gasta = 4, ponto_vida_curada = 24)
 mensagem = objeto_cartacura2.usar(objeto_personagem2)
 print(f"{objeto_personagem2.nome} usou {objeto_cartacura2.nome}")
 print(mensagem)
@@ -59,6 +59,13 @@ print("")
 objeto_cartaaumentoataque1 = CartaAumento(nome = "Carta de Aumento de Ataque", descricao = "aumenta o ataque", energia_gasta = 1, tipo = "Ataque", pts_aumentado = 1)
 mensagem = objeto_cartaaumentoataque1.usar(objeto_personagem1)
 print(f"{objeto_personagem1.nome} usou {objeto_cartaaumentoataque1.nome}")
+print(mensagem)
+
+print("")
+
+objeto_cartaaumentodefesa1 = CartaAumento(nome = "Carta de Aumento de Defesa", descricao = "Aumenta a Defesa", energia_gasta = 1, tipo = "Defesa", pts_aumentado = 1)
+mensagem = objeto_cartaaumentodefesa1.usar(objeto_personagem2)
+print(f"{objeto_personagem2.nome} usou {objeto_cartaaumentodefesa1.nome}")
 print(mensagem)
 
 print("")
