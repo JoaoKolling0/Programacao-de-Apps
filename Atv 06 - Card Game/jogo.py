@@ -1,4 +1,4 @@
-from personagem import Personagem, Carta, CartaDano, CartaCura, CartaRoubo, CartaStun, CartaAumento
+from personagem import Personagem, CartaDano, CartaCura, CartaRoubo, CartaStun, CartaAumento
 
 nome = input("Digite seu nome: ")
 
