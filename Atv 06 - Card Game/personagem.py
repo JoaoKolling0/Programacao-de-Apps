@@ -4,7 +4,7 @@ class Personagem: # A classe que age sob o personagem
         self.status = status
         self.vida_max = 100
         self.vida = 100
-        self.pontos_ataque = 8
+        self.pontos_ataque = 4
         self.pontos_defesa = 2
         self.mao_de_cartas = []
         self.energia_max = 10
