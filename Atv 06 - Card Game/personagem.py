@@ -6,7 +6,7 @@ class Personagem: # A classe que age sob o personagem
         self.vida = 100
         self.pontos_ataque = 4
         self.pontos_defesa = 2
-        self.mao_de_cartas = []
+        self.mao_de_cartas = [] # Os colchetes (isso = []) é uma "lista";
         self.energia_max = 10
         self.energia = 10
         
