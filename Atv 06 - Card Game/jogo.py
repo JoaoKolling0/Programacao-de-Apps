@@ -25,6 +25,12 @@ baralho.append(objeto_cartadano1)
 objeto_cartadano2 = CartaDano(nome = "Pulso de Sangue", descricao = "Lança uma especie de feixe feito de sangue", energia_gasta = 6, ponto_dano = 24)
 baralho.append(objeto_cartadano2)
 
+objeto_cartadano3 = CartaDano(nome = "Espada Relâmpago", descricao = "O personagem carrega a espada com Raios e teleporta atras do adversário fazendo um corte com a espada", energia_gasta = 4, ponto_dano = 16)
+baralho.append(objeto_cartadano3)
+
+objeto_cartadano4 = CartaDano(nome = "Corte Corrompido", descricao = "O personagem sacrifica sua honra por um momento para atacar o adversário com sua espada agora corrompida", energia_gasta = 2, ponto_dano = 8)
+baralho.append(objeto_cartadano4)
+
 objeto_cartacura1 = CartaCura(nome = "Poção de Cura pequena", descricao = "Poção de cura que restaura uma pequena porção de vida", energia_gasta = 2, ponto_vida_curada = 8)
 baralho.append(objeto_cartacura1)
 

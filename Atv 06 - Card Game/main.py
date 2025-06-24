@@ -21,12 +21,27 @@ print(mensagem)
 
 print("")
 
-objeto_cartadano2 = CartaDano(nome = "Pulso de Sangue", descricao = "Lança uma especie de feixe feito de sangue", energia_gasta = 6, ponto_dano = 24)
+objeto_cartadano2 = CartaDano(nome = "Pulso de Sangue", descricao = "Lança uma especie de feixe feito de sangue", energia_gasta = 6, ponto_dano = 32)
 mensagem = objeto_cartadano2.usar(objeto_personagem2)
 print(f"{objeto_personagem1.nome} usou {objeto_cartadano2.nome} em {objeto_personagem2.nome}")
 print(mensagem)
 
 print("")
+
+objeto_cartadano3 = CartaDano(nome = "Espada Relâmpago", descricao = "O personagem carrega a espada com Raios e teleporta atras do adversário fazendo um corte com a espada", energia_gasta = 4, ponto_dano = 16)
+mensagem = objeto_cartadano3.usar(objeto_personagem2)
+print(f"{objeto_personagem1.nome} Usou {objeto_cartadano3.nome} em {objeto_personagem2.nome}")
+print(mensagem)
+
+print("")
+
+objeto_cartadano4 = CartaDano(nome = "Corte Corrompido", descricao = "O personagem sacrifica sua honra por um momento para atacar o adversário com sua espada agora corrompida", energia_gasta = 2, ponto_dano = 8)
+mensagem = objeto_cartadano4.usar(objeto_personagem1)
+print(f"{objeto_personagem2.nome} usou {objeto_cartadano4.nome} em {objeto_personagem1.nome}")
+print(mensagem)
+
+print("")
+
 # O "objeto_cartacura" é o jeito que usei para printar na main cartas de cura em geral, eu ainda tenho que fazer uma interfaçe;
 objeto_cartacura1 = CartaCura(nome = "Poção de Cura pequena", descricao = "Poção de cura que restaura uma pequena porção de vida", energia_gasta = 2, ponto_vida_curada = 8)
 mensagem = objeto_cartacura1.usar(objeto_personagem1)
@@ -69,3 +84,4 @@ print(f"{objeto_personagem2.nome} usou {objeto_cartaaumentodefesa1.nome}")
 print(mensagem)
 
 print("")
+
