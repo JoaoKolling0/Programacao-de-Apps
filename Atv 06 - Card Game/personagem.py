@@ -13,6 +13,9 @@ class Personagem: # A classe que age sob o personagem
     def falar_nome(self): # Atributo que age sob o nome do personagem(ou personagens);
         return f"Olá, meu nome é {self.nome}"
     
+    def falar_cartas(self):
+        return self.mao_de_cartas
+    
 class Carta: # A classe que age sob as cartas;
     def __init__(self, nome, descricao, energia_gasta):
         self.nome = nome

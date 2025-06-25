@@ -1,4 +1,5 @@
 from personagem import Personagem, CartaDano, CartaCura, CartaRoubo, CartaStun, CartaAumento
+import random
 
 nome = input("Digite seu nome: ")
 
@@ -49,3 +50,29 @@ baralho.append(objeto_cartaaumentoataque1)
 objeto_cartaaumentodefesa1 = CartaAumento(nome = "Carta de Aumento de Defesa", descricao = "Aumenta a Defesa", energia_gasta = 1, tipo = "Defesa", pts_aumentado = 1)
 baralho.append(objeto_cartaaumentodefesa1)
 
+print("")
+
+# Random vai pegar da lista (baralho) e de forma aletória escolher um certo numeros de cartas;
+objeto_personagem1.mao_de_cartas.extend(random.choices(baralho, k = 4))
+objeto_personagem2.mao_de_cartas.extend(random.choices(baralho, k = 4))
+
+print("Suas cartas são: ")
+for carta in objeto_personagem1.falar_cartas():
+    print(carta.nome)
+
+jogador_atual = objeto_personagem1
+jogador_atual.falar_nome
+
+print("")
+
+# A partida continua enquanto a vida estiver maior que 0;    
+while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
+    print (f"É a vez de {jogador_atual.nome}")
+    
+    print(f"Vida de {jogador_atual.nome}: {jogador_atual.vida}")
+    print(f"Energia de {jogador_atual.nome}: {jogador_atual.energia}")
+    
+    print("")
+    
+    input("Escolha uma Ação: ")
+    
