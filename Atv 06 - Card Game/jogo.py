@@ -1,4 +1,4 @@
-from personagem import Personagem, CartaDano, CartaCura, CartaRoubo, CartaStun, CartaAumento
+from personagem import Personagem, Carta, CartaDano, CartaCura, CartaRoubo, CartaStun, CartaAumento
 import random
 
 nome = input("Digite seu nome: ")
@@ -74,5 +74,20 @@ while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
     
     print("")
     
-    input("Escolha uma Ação: ")
+    
+
+    acao = int(input(''' Escolha sua ação:
+                        
+                        1 - Ver Cartas
+                        2 - Usar Carta
+                        3 - Comprar Carta
+                        0 - Fazer Nada
+                        '''))
+    
+    if acao == 1:
+        for carta in objeto_personagem1.falar_cartas():
+            print(carta.nome)
+            continue
+    elif acao == 0:
+        break
     
