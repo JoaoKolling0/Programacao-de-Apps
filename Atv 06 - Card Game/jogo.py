@@ -17,10 +17,10 @@ print(mensagem)
 print("")
 
 # Criar baralho com as cartas existentes;
-baralho = []
+baralho = [] # Lista é feita usando colchetes (lista é feita com colchetes, exemplo: Cartas "[]");
 
 objeto_cartadano1 = CartaDano(nome = "Air Slash", descricao = "Lança um corte feito de vento na direção do oponente", energia_gasta = 2, ponto_dano = 8)
-baralho.append(objeto_cartadano1)
+baralho.append(objeto_cartadano1) # O .append coloca o Objeto na lista;
 
 objeto_cartadano2 = CartaDano(nome = "Pulso de Sangue", descricao = "Lança uma especie de feixe feito de sangue", energia_gasta = 6, ponto_dano = 24)
 baralho.append(objeto_cartadano2)
