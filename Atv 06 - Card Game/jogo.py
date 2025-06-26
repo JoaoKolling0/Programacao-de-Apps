@@ -63,10 +63,13 @@ for carta in objeto_personagem1.falar_cartas():
 jogador_atual = objeto_personagem1
 jogador_atual.falar_nome
 
+jogador_oponente = objeto_personagem2
 print("")
 
 # A partida continua enquanto a vida estiver maior que 0;    
 while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
+    
+    print("")
     print (f"É a vez de {jogador_atual.nome}")
     
     print(f"Vida de {jogador_atual.nome}: {jogador_atual.vida}")
@@ -76,18 +79,40 @@ while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
     
     
 
-    acao = int(input(''' Escolha sua ação:
+    acao = input(''' Escolha sua ação:
                         
                         1 - Ver Cartas
                         2 - Usar Carta
                         3 - Comprar Carta
                         0 - Fazer Nada
-                        '''))
+                        
+                        ''')
     
-    if acao == 1:
+    if acao == "1":
         for carta in objeto_personagem1.falar_cartas():
             print(carta.nome)
-            continue
-    elif acao == 0:
+            
+    elif acao == "2":
+        print("Escolha uma carta para usar: ")
+        for indice,carta in enumerate(objeto_personagem1.mao_de_cartas):
+            print (f"{indice + 1} {carta.nome}")
+        
+        carta_escolhida = input()
+        carta_escolhida = int(carta_escolhida)
+        carta = jogador_atual.mao_de_cartas.pop(carta_escolhida - 1)
+        print("")
+        print("A carta escolhida foi: ")
+        print(carta.nome)
+        if (isinstance(carta, CartaDano)):
+            carta.usar(oponente = jogador_oponente)
+        elif (isinstance(carta, CartaCura)):
+            carta.usar(personagem = jogador_atual)
+        elif (isinstance(carta, CartaRoubo)):
+            carta.usar(oponente = jogador_oponente)
+        elif (isinstance(carta, CartaStun)):
+            carta.usar(oponente = jogador_oponente)
+        elif (isinstance(carta, CartaAumento)):
+            carta.usar(personagem = jogador_atual)    
+    elif acao == "0":
         break
     
