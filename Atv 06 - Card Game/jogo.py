@@ -112,7 +112,12 @@ while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
         elif (isinstance(carta, CartaStun)):
             carta.usar(oponente = jogador_oponente)
         elif (isinstance(carta, CartaAumento)):
-            carta.usar(personagem = jogador_atual)    
+            carta.usar(personagem = jogador_atual)
+        
+    elif acao == "3":
+        print("Comprar uma carta ? ")
+        objeto_personagem1.mao_de_cartas.extend(random.choices(baralho, k = 1))
+        
     elif acao == "0":
         break
     
