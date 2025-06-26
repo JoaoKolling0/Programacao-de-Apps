@@ -72,6 +72,7 @@ class CartaAumento(Carta): # A classe onde age sob as cartas de buff de atributo
         personagem.pontos_ataque += self.pts_aumentado
         return f"{personagem.nome} aumentou {self.pts_aumentado} de {self.tipo}"
     
+    
 class Partida: # A classe que age sob a Partida;
     def __init__(self, turno, jogador1, jogador2, jogador_atual):
         

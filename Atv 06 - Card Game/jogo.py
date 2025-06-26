@@ -74,6 +74,8 @@ while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
     
     print(f"Vida de {jogador_atual.nome}: {jogador_atual.vida}")
     print(f"Energia de {jogador_atual.nome}: {jogador_atual.energia}")
+    print(f"Ataque de {jogador_atual.nome}: {jogador_atual.pontos_ataque}")
+    print(f"Defesa de {jogador_atual.nome}: {jogador_atual.pontos_defesa}")
     
     print("")
     
@@ -115,9 +117,11 @@ while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
             carta.usar(personagem = jogador_atual)
         
     elif acao == "3":
+        print("")
         print("Comprar uma carta ? ")
         objeto_personagem1.mao_de_cartas.extend(random.choices(baralho, k = 1))
         
+        print("")
     elif acao == "0":
         continue
     
