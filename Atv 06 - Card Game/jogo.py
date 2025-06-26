@@ -119,5 +119,6 @@ while objeto_personagem1.vida > 0 and objeto_personagem2.vida > 0:
         objeto_personagem1.mao_de_cartas.extend(random.choices(baralho, k = 1))
         
     elif acao == "0":
-        break
+        continue
+    
     
